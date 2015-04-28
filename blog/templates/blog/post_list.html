@@ -5,13 +5,11 @@
 
 	
 <body>
-
+{% for post in posts %}
 <div>
-<a href=""> First post </a>
-<p> Posted on : [insert time]</p>
+<p>published: {{post.published_data}}</p>
+<h1><a href =""> {{post.title}} </a> </h1>
+<p>{{post.text|linebreaks}}</p>
 </div>
-
-<div>
-<a href=""> Second post </a>
-<p> Posted on: [insert time]</p>
+{% endfor%}
 </html>
